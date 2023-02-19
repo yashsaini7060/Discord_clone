@@ -26,29 +26,68 @@
       }
     }
   </script>
+  <!-- CUSTOM CSS ONLY FOR FONTS -->
   <link href="./stylesheet.css" rel="stylesheet">
+  <!-- CDN FOR ANIMATIONS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- ALPINE JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
 
   
-  <div class="bg-blue xl:bg-[url('./assets/svgexport-4.png')] xl:bg-bottom xl:bg-no-repeat overflow-hidden">
-    <!-- NAV BAR -->
+  <div class="bg-blue xl:bg-[url('./assets/svgexport-4.png')] xl:bg-bottom xl:bg-no-repeat overflow-hidden" x-data="{open: false}">
+    <!-- MOBILE & TAB NAV BAR -->
+    <nav class="absolute z-10 right-0 w-[95%] h-[100%] bg-white rounded-bl-xl rounded-tl-xl p-6 duration-200 sm:w-[40%] md:hidden" :class="{'translate-x-0 ease-in opacity-100':open === true, 'translate-x-full ease-out opacity-0': open === false}">
+      <div class="h-[90%] ">
+        <div class="flex justify-between items-center">
+          <img src="./assets/discord.png" class="h-9">
+          <img src="./assets/close.png" class="h-6" @click="open = false">
+        </div>
+        <div class="h-[1px] bg-black my-6"></div>
+        <div class="h-[55%] flex flex-col justify-between text-[1rem] text-notblack  ">
+        <a href="#" class="px-4 py-2 hover:bg-darkbg rounded-md">Home</a>
+        <a href="#" class="px-4 py-2 hover:bg-darkbg rounded-md">Download</a>
+        <a href="#" class="px-4 py-2 hover:bg-darkbg rounded-md">Nitro </a>
+        <a href="#" class="px-4 py-2 hover:bg-darkbg rounded-md">Discover</a>
+        <a href="#" class="px-4 py-2 hover:bg-darkbg rounded-md">Safety 
+          <img src="./assets/greater.png" class="inline">
+        </a>
+        <a href="#" class="px-4 py-2 hover:bg-darkbg rounded-md">Mod Academy 
+          <img src="./assets/greater.png" class="inline">
+        </a>
+        <a href="#" class="px-4 py-2 hover:bg-darkbg rounded-md">Support</a>
+        <a href="#" class="px-4 py-2 hover:bg-darkbg rounded-md">Blog</a>
+        <a href="#" class="px-4 py-2 hover:bg-darkbg rounded-md">Careers</a>
+        </div>
+        
+      </div>
+      <button class="flex justify-center items-center bg-lblue text-sm text-white text-left font-medium items-center px-8 py-4 my-6 rounded-full lg:hidden ">
+        <img src="./assets/svgexport-8.png" class="mr-2 ">
+        Download from Google Play
+      </button>
+
+    </nav>
+    <!-- MOBILE & TAB NAV BAR -->
+
+
+    <!-- DESKTOP NAV -->
     <nav class="h-[5rem] px-6 flex justify-between items-center text-white sm:px-10 text-white font-semibold xl:w-[1260px] xl:mx-auto">
       <img src="./assets/svgexport-13.png" class="h-8">
       <div class="hidden md:flex justify-between w-[55%]">
-      <a href="">Download</a>
-      <a href="">Nitro</a>
-      <a href="">Discover</a>
-      <a href="">Safety</a>
-      <a href="">Support</a>
-      <a href="">Blog</a>
-      <a href="">Careers</a>
+      <a href="#">Download</a>
+      <a href="#">Nitro</a>
+      <a href="#">Discover</a>
+      <a href="#">Safety</a>
+      <a href="#">Support</a>
+      <a href="#">Blog</a>
+      <a href="#">Careers</a>
       </div>
-  
       <button class="hidden text-notblack text-sm font-normal bg-white px-3 py-2 rounded-3xl md:block">Open Discord</button>
-      <img src="./assets/svgexport-2.png" class="h-10 md:hidden">
+      <img src="./assets/svgexport-2.png" class="h-10 md:hidden" @click="open = true">
     </nav>
+    <!-- DESKTOP NAV ENDS -->
+    
     <!-- NAV BAR ENDS -->
   
     <!-- HEADER SECTION -->
@@ -134,7 +173,7 @@
       </div>
       <h2 class="text-[2rem]  leading-10 font-bold mb-4 text-center sm:mb-[4rem]">Ready to start your journey?</h2>
       
-      <button class="flex justify-center items-center w-[100%] bg-lblue  text-[1.1rem] text-white text-left font-medium items-center px-8 py-4 my-6 rounded-full sm:w-[50%] sm:mx-auto md:hidden">
+      <button class="flex justify-center items-center w-[100%] bg-lblue  text-[1.1rem] text-white text-left font-medium items-center px-8 py-4 my-6 rounded-full hover:bg-hovblue hover:drop-shadow-2xl sm:w-[50%] sm:mx-auto md:hidden">
         <img src="./assets/svgexport-8.png" class="mr-2">
         Download from Google Play
       </button>
