@@ -9,7 +9,7 @@
       theme: {
         screens: {
         'xs':'370px',         
-        'sm': '750px',
+        'sm': '768px',
         'tab': '900px',
         'md': '1140px',
         'lg': '1800px',
@@ -20,6 +20,7 @@
             blue: '#404EED',
             lblue: '#5865f2',
             hovblue: '#7983F5',
+            darkbg: '#F6F6F6',
             notblack:'#23272a',
           }
         }
@@ -27,67 +28,87 @@
     }
   </script>
   <link href="./stylesheet.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body class="bg-blue">
 
   <!-- NAV BAR -->
-  <nav class="h-[5rem] px-6 flex justify-between items-center">
-    <img src="./assets/svgexport-13.svg" class="h-8">
-    <button class="font-notblack text-sm bg-white px-4 py-2 rounded-3xl">Open Discord</button>
-    <img src="./assets/svgexport-2.svg" class="h-10">
+  <nav class="h-[5rem] px-6 flex justify-between items-center sm:px-10">
+    <img src="./assets/svgexport-13.png" class="h-8">
+    <button class="hidden font-notblack text-sm bg-white px-4 py-2 rounded-3xl">Open Discord</button>
+    <img src="./assets/svgexport-2.png" class="h-10">
   </nav>
   <!-- NAV BAR ENDS -->
 
   <!-- HEADER SECTION -->
-  <div class="flex-col text-white px-6 pt-[3.5rem]">
-    <h1 class="text-2xl font-extrabold">IMAGINE A PLACE...</h1>
-    <p class="my-6">...where you can belong to a school club, a gaming group, or a worldwide art community. Where just you and a handful of friends can spend time together. A place that makes it easy to talk every day and hang out more often.</p>
-    <div class="text-col pb-[3.5rem]">
-      <button class="flex items-center bg-white w-[90%] text-[1.1rem] text-black text-left font-medium items-center px-8 py-4 my-6 rounded-3xl">
-        <img src="./assets/svgexport-3.svg" class="mr-2">
+  <div class="relative flex-col text-white px-6 pt-[3.5rem] overflow-hidden sm:bg-[url('./assets/svgexport-4.png')] sm:bg-bottom sm:bg-no-repeat sm:px-10 sm:py-[5rem] sm:h-[41rem]">
+
+    <div class="sm:w-[60%]">
+      <h1 class="text-2xl font-extrabold sm:text-[3.5rem] sm:leading-[3.5rem] ">IMAGINE A PLACE...</h1>
+      <p class="my-6">...where you can belong to a school club, a gaming group, or a worldwide art community. Where just you and a handful of friends can spend time together. A place that makes it easy to talk every day and hang out more often.</p>
+
+      <div class="text-col pb-[3.5rem]">
+      <button class="flex justify-center items-center bg-white text-[1.1rem] text-black text-left font-medium items-center px-8 py-4 my-6 rounded-full sm:hidden">
+        <img src="./assets/svgexport-3.png" class="mr-2 ">
+        Downlode from Google Play
+      </button>
+      <button class="hidden items-center bg-white  text-[1.1rem] text-black text-left font-medium items-center px-8 py-4 my-6 rounded-full sm:flex ">
+        <img src="./assets/svgexport-3.png" class="mr-2">
         Downlode for Windows
       </button>
-      <button class="flex items-center bg-notblack text-white text-[1.1rem] text-black text-ceter font-medium items-center px-9 py-4 rounded-3xl">
+      <button class="hidden items-center bg-notblack text-white text-[1.1rem] text-black text-ceter font-medium items-center px-9 py-4 rounded-full  sm:flex ">
         Open Discord in your browser
       </button>
+      </div>
     </div>
-    <img src="./assets/svgexport-5.svg" class="relative w-[100%] -ml-[80px]">
 
-    <img src="./assets/svgexport-4.svg" class="hidden">
-    <img src="./assets/svgexport-6.svg" class="hidden">
+   
+    <img src="./assets/svgexport-5.png" class="relative -ml-[80px] sm:hidden">
+    <img src="./assets/svgexport-6.png" class="hidden sm:block sm:absolute top-[18.5rem] ml-[280px]">
+   
+
+
   </div>
+
   <!-- HEADER SECTION ENDS-->
 
   <!-- SUB SECTIONS -->
 
-  <div class="bg-white px-6 py-[3.5rem]">
-    <img src="./assets/Stylized image of a Discord server with multiple channels for studying, games, cooking, and pet photos..svg" alt="">
-    <div>
-      <h2 class="text-xl font-bold mb-4">Create an invite-only place where you belong</h2>
+  <div class="bg-white px-6 py-[3.5rem] sm:flex sm:justify-between  sm:px-10 sm:py-[5rem]" >
+    <div class="flex justify-center sm:w-[48%]">
+      <img src="./assets/Stylized image of a Discord server with multiple channels for studying, games, cooking, and pet photos..png" class="object-contain" data-aos="fade-up" data-aos-duration="1000">
+    </div>
+    
+    <div class="sm:w-[48%]" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-xl font-bold mb-4  sm:text-[3.1rem] sm:leading-[4rem]">Create an invite-only place where you belong</h2>
       <p>Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat.</p>
     </div>
   </div>
 
-  <div class="bg-white px-6 py-[3.5rem]">
-    <img src="./assets/Stylized image showing friends hanging out in multiple voice channels..svg" alt="">
-    <div>
-      <h2 class="text-xl font-bold mb-4">Where hanging out is easy</h2>
+  <div class="bg-darkbg px-6 py-[3.5rem] sm:flex sm:flex-row-reverse sm:justify-between  sm:px-10 sm:py-[5rem]">
+    <div class="flex justify-center sm:w-[48%]">
+      <img src="./assets/Stylized image showing friends hanging out in multiple voice channels..png" class="object-contain" data-aos="fade-up" data-aos-duration="1000">
+    </div>
+    <div class="sm:w-[48%]" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-xl font-bold mb-4 sm:text-[3.1rem] sm:leading-[4rem]">Where hanging out is easy</h2>
       <p>Grab a seat in a voice channel when you’re free. Friends in your server can see you’re around and instantly pop in to talk without having to call.</p>
     </div>
   </div>
 
-  <div class="bg-white px-6 py-[3.5rem]">
-    <img src="./assets/Stylized image showing friends in a server organized into roles for Coach, Student Lead, and Animal Crossing..svg" alt="">
-    <div>
-      <h2 class="text-xl font-bold mb-4">From few to a fandom</h2>
+  <div class="bg-white px-6 py-[3.5rem] sm:flex sm:justify-between  sm:px-10 sm:py-[5rem]">
+    <div class="flex justify-center sm:w-[48%]">
+    <img src="./assets/Stylized image showing friends in a server organized into roles for Coach, Student Lead, and Animal Crossing..png" class="object-contain" data-aos="fade-up" data-aos-duration="1000">
+  </div>
+    <div class="sm:w-[48%]" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-xl font-bold mb-4 sm:text-[3.1rem] sm:leading-[4rem]">From few to a fandom</h2>
       <p>Get any community running with moderation tools and custom member access. Give members special powers, set up private channels, and more.</p>
     </div>
   </div>
 
-  <div class="flex flex-col-reverse bg-white px-6 py-[3.5rem]">
-    <img src="./assets/Stylized image showing friends video talking with each other on desktop and mobile..svg" alt="">
-    <div>
-      <h1 class="text-xl font-bold leading-5 mb-4">RELIABLE TECH FOR STAYING CLOSE</h1>
+  <div class="flex flex-col-reverse bg-darkbg px-6 py-[3.5rem] sm:px-10 sm:py-[5rem] ">
+    <img src="./assets/Stylized image showing friends video talking with each other on desktop and mobile..png" data-aos="fade-up" data-aos-duration="1000">
+    <div class="sm:text-center mb-8" data-aos="fade-up " data-aos-duration="1000">
+      <h1 class="text-xl font-bold leading-5 mb-4 sm:text-[2.2rem] sm:leading-8 ">RELIABLE TECH FOR STAYING CLOSE</h1>
       <p>Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.</p>
     </div>
   </div>
@@ -95,10 +116,18 @@
   <!-- SUB SECTIONS ENDS -->
 
   <!-- READY TO START SECTION -->
-  <div class="bg-white px-6 pt-8 pb-[3.5rem]">
-    <h2 class="text-[2rem]  leading-10 font-bold mb-4">Ready to start your journey?</h2>
-    <button class="flex items-center w-[100%] bg-lblue  text-[1.1rem] text-white text-left font-medium items-center px-8 py-4 my-6 rounded-full">
-      <img src="./assets/svgexport-8.svg" class="mr-2">
+  <div class="bg-white px-6 pt-8 pb-[3.5rem] ">
+    <div class="relative w-[35rem] mx-auto">
+      <img src="./assets/svgexport-7.png" class=" absolute">
+    </div>
+    <h2 class="text-[2rem]  leading-10 font-bold mb-4 text-center sm:mb-[4rem]">Ready to start your journey?</h2>
+    
+    <button class="flex justify-center items-center w-[100%] bg-lblue  text-[1.1rem] text-white text-left font-medium items-center px-8 py-4 my-6 rounded-full sm:w-[50%] sm:mx-auto">
+      <img src="./assets/svgexport-8.png" class="mr-2">
+      Downlode from Google Play
+    </button>
+    <button class="hidden md:flex items-center w-[100%] bg-lblue  text-[1.1rem] text-white text-left font-medium items-center px-8 py-4 my-6 rounded-full ">
+      <img src="./assets/svgexport-8.png" class="mr-2">
       Downlode for Windows
     </button>
   </div>
@@ -108,31 +137,31 @@
 
   <!-- FOOTER -->
   <div class="bg-notblack px-6 py-[4rem]">
-    <div class="mb-8">
-      <div class="mb-[4rem]">
+    <div class="flex flex-col mb-8 sm:flex-row sm:justify-between">
+      <div class="mb-[4rem] sm:w-[40%]">
         <h1 class="text-lblue text-[2rem] leading-8 mb-5">IMAGINE A PLACE</h1>
         <div class="flex text-white items-center mb-5">
           <img src="./assets/usa.png" class="h-4 mr-1">
-          <p class="mr-1">English,USA</p>
-          <img src="./assets/Open Locale Picker.svg" alt="">
+          <p class="mr-1">English, USA</p>
+          <img src="./assets/Open Locale Picker.png" alt="">
         </div>
         <div class="flex">
           <a href="https://twitter.com/discord">
-            <img src="./assets/svgexport-9.svg" class="mr-5">
+            <img src="./assets/svgexport-9.png" class="mr-5">
           </a>
           <a href="https://www.instagram.com/discord/">
-            <img src="./assets/svgexport-10.svg" class="mr-5">
+            <img src="./assets/svgexport-10.png" class="mr-5">
           </a>
           <a href="https://m.facebook.com/discord/">
-            <img src="./assets/svgexport-11.svg" class="mr-5">
+            <img src="./assets/svgexport-11.png" class="mr-5">
           </a>
           <a href="https://www.youtube.com/discord">
-            <img src="./assets/svgexport-12.svg" class="mr-5">
+            <img src="./assets/svgexport-12.png" class="mr-5">
           </a>
         </div>
       </div>
-      <div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 mb-[2.5rem]">
+      <div class="sm:w-[50%]">
+        <div class="grid grid-cols-2  mb-[2.5rem]">
           <ul class="text-base text-white">
             <li class="mb-2 text-lblue">
               <a href="#">Product</a>
@@ -165,7 +194,7 @@
             </li>
           </ul>
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3">
+        <div class="grid grid-cols-2 ">
           <ul class="text-base text-white">
             <li class="mb-2 text-lblue">
               <a href="#">Resources</a>
@@ -231,13 +260,20 @@
     <div class="h-[1px] bg-blue"></div>
 
     <div class="flex justify-between items-end h-[4rem]">
-      <img src="./assets/svgexport-13.svg" class="h-[2.2rem]" />
-      <button class="px-3 py-2 rounded-full text-sm text-white bg-lblue">Downlode</button>
+      <img src="./assets/svgexport-13.png" class="h-[2.2rem]" />
+      <button class="px-3 py-2 rounded-full text-sm text-white bg-lblue">Open Discord</button>
     </div>
   </div>
 
-  <!-- FOOTER -->
+  <!-- FOOTER ENDS -->
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
 
 </body>
 </html>
