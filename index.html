@@ -38,7 +38,7 @@
   
   <div class="bg-blue xl:bg-[url('./assets/svgexport-4.png')] xl:bg-bottom xl:bg-no-repeat overflow-hidden" x-data="{open: false}">
     <!-- MOBILE & TAB NAV BAR -->
-    <nav class="absolute z-10 right-0 w-[95%] h-[100%] bg-white rounded-bl-xl rounded-tl-xl p-6 duration-200 sm:w-[40%] md:hidden" :class="{'translate-x-0 ease-in opacity-100':open === true, 'translate-x-full ease-out opacity-0': open === false}">
+    <nav class="fixed z-10 right-0 w-[95%] h-[100%] bg-white rounded-bl-xl rounded-tl-xl p-6 duration-200 sm:w-[40%] md:hidden" :class="{'translate-x-0 ease-in opacity-100':open === true, 'translate-x-full ease-out opacity-0': open === false}">
       <div class="h-[90%] ">
         <div class="flex justify-between items-center">
           <img src="./assets/discord.png" class="h-9">
@@ -323,6 +323,7 @@
 
   <!-- FOOTER ENDS -->
 
+  <!-- SCRIPT FOR NAV BAR -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -333,3 +334,4 @@
 
 </body>
 </html>
+
